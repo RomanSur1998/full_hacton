@@ -2,21 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: aliceblue;
+  /* color: aliceblue; */
 }
-body {
-  background-color: black;
-}
+
 .container {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: black;
 }
 .rightPart {
   width: 73%;
   background: linear-gradient(to top, rgb(33, 22, 67), rgba(71, 51, 139, 1));
-  height: 100vh;
+  /* height: 100vh; */
+  border-radius: 15px;
+}
+.rightPart_1 {
+  width: 73%;
+  background: linear-gradient(to top, rgb(33, 22, 67), rgba(71, 51, 139, 1));
+  /* height: 100vh; */
   border-radius: 15px;
 }
 .leftPart {

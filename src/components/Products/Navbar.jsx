@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "../style/Navbar.module.css";
-import right from "../../assets/chevron_big_right.png";
-import left from "../../assets/chevron_big_left.png";
+import right from "../../assets/chevron_big_right.svg";
+import left from "../../assets/chevron_big_left.svg";
 import users from "../../assets/Line=empty, Name=friends.svg";
 import login_user from "../../assets/Line=empty, Name=UserCircle.svg";
 
