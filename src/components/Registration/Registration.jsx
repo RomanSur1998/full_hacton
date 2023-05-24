@@ -148,7 +148,7 @@ const Registration = () => {
           <p className={register.typeElement}>
             <span>
               Have an account?
-              <Link>Log in</Link>
+              <Link to="/login">Log in</Link>
             </span>
           </p>
         </form>

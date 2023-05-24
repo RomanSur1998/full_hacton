@@ -1,13 +1,10 @@
 import React from "react";
-import Registration from "./components/Registration/Registration";
-
-import PlayListBlock from "./components/Products/PlayListBlock";
+import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
     <div>
-      <PlayListBlock />
-      <Registration></Registration>
+  <MainRoutes></MainRoutes>
     </div>
   );
 };
