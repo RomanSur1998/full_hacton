@@ -35,5 +35,6 @@
   text-align: center;
 }
 .line_left input:focus {
+  color: aliceblue;
   border: 1px solid white;
 }

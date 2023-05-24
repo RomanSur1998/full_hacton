@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+h2 {
+  font-family: "Open Sans", sans-serif;
+}
+h5 {
+  font-family: "Open Sans", sans-serif;
+}
+h4 {
+  font-family: "Open Sans", sans-serif;
+}
 .TopInfo_Right {
   margin: 20px;
   display: flex;
@@ -10,6 +20,7 @@
   display: flex;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  color: aliceblue;
 }
 .TopInfo_Left {
   display: flex;
@@ -34,8 +45,15 @@
   font-size: 1em;
 }
 .track_block {
+  padding: 50px 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.345);
+  background: linear-gradient(
+    to left top,
+    rgba(0, 0, 0, 0.678),
+    rgba(0, 0, 0, 0.23)
+  );
+  color: aliceblue;
+  /* background-color: rgba(0, 0, 0, 0.345); */
 }
 .track_props {
   margin: 0 auto;
@@ -55,6 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-family: "Open Sans", sans-serif;
 }
 .track_line_head table {
   width: 95%;
@@ -63,11 +82,72 @@
   display: flex;
   flex-direction: column;
 }
-.track_line_head table tr {
+.track_line_info {
+  font-family: "Open Sans", sans-serif;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
+
+.track_line:hover {
+  background-color: rgba(0, 0, 0, 0.419);
+  border-radius: 0.5em;
+}
+
+.track_line_head tr {
+  padding: 0 40px;
+  margin: 0 10px;
+}
+.track_props_left img:first-child {
+  width: 50px;
+}
+.track_props_right img:last-child {
+  width: 25px;
+}
+
+/* ! блок грид  */
+.container_grid {
+  width: 96%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 30px auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.558);
+  font-family: "Open Sans", sans-serif;
+}
+.container_grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .track_line {
-  border: 1px solid white;
+  height: 70px;
+  width: 96%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 30px auto;
+  font-family: "Open Sans", sans-serif;
+}
+.track_line div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.track_line_section {
+  display: flex;
+}
+
+.track_line_section_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+.track_line_section_name h4 {
+  margin: 5px;
+}
+.track_line_section_name h5 {
+  margin: 5px;
 }
