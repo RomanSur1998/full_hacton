@@ -14,25 +14,6 @@ const Registration = () => {
 
   const { handleRegister, error, loading, setError } = useAuth();
 
-  // function handleSave(event) {
-  //   event.preventDefault();
-  //   if (
-  //     !email.trim() ||
-  //     !number.trim() ||
-  //     !password.trim() ||
-  //     !passwordConfirm.trim()
-  //   ) {
-  //     alert("заполните поля");
-  //   } else {
-  //     let formData = new FormData();
-  //     formData.append("email", email);
-  //     formData.append("number", number);
-  //     formData.append("password", password);
-  //     formData.append("password_confirm", passwordConfirm);
-  //     handleRegister(formData);
-  //   }
-  // }
-
   function handleSave(event) {
     event.preventDefault();
     if (
