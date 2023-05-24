@@ -1,0 +1,73 @@
+.TopInfo_Right {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.TopInfo {
+  width: 95%;
+  margin: 30px auto;
+  display: flex;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.TopInfo_Left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(
+    to left top,
+    rgba(122, 142, 135, 1),
+    rgba(66, 24, 183, 1)
+  );
+  /* margin: 20px; */
+  -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  -moz-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+}
+.TopInfo_Right h2 {
+  font-size: 4em;
+}
+.TopInfo_Right h5 {
+  font-size: 1em;
+}
+.track_block {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.345);
+}
+.track_props {
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.track_props_left {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-around;
+}
+.track_props_right {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.track_line_head table {
+  width: 95%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+.track_line_head table tr {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.track_line {
+  border: 1px solid white;
+}
