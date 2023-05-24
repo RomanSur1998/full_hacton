@@ -1,0 +1,39 @@
+.line_container {
+  width: 95%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.line_left {
+  display: flex;
+}
+.line_right {
+  display: flex;
+}
+.line_right img {
+  width: 25px;
+}
+.line_arrow_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(11, 11, 11, 0.641);
+  border-radius: 30px;
+  margin: 5px;
+}
+.line_arrow_left:hover {
+  background-color: rgb(5, 4, 5);
+}
+.line_left input {
+  border-radius: 40px;
+  width: 300px;
+  border: none;
+
+  background-color: rgba(38, 38, 38, 1);
+  text-align: center;
+}
+.line_left input:focus {
+  border: 1px solid white;
+}
