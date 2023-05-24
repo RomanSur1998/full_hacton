@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+body {
+  background-color: black;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.rightPart {
+  width: 73%;
+  background: linear-gradient(to top, rgb(33, 22, 67), rgba(71, 51, 139, 1));
+  height: 100vh;
+  border-radius: 15px;
+}
+.leftPart {
+  width: 23%;
+  background-color: rgba(18, 18, 18, 1);
+}
