@@ -7,6 +7,8 @@ import PlayListBlock from "./components/Products/PlayListBlock";
 const App = () => {
   return (
     <div>
+      <Registration />
+      <PlayListBlock />
       <MainRoutes />
     </div>
   );

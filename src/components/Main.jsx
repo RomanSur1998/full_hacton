@@ -1,11 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./Main.module.css";
 
 const Main = () => {
   return (
     <div>
       <div className={classes.container}>
-        <h3>Try something else</h3>
+        <div className={classes.navv}>
+          <h3>Try something else</h3>
+          <Link to={"/fullmain"}>
+            <p>Show all</p>
+          </Link>
+        </div>
+
         <div className={classes.cards}>
           <div className={classes.card}>
             <div className={classes.mg_holder}>
@@ -41,108 +48,6 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <div className={classes.card}>
-            <div className={classes.mg_holder}>
-              <img
-                src="https://static01.nyt.com/images/2022/06/28/arts/28CONAN-GRAY1/28CONAN-GRAY1-superJumbo.jpg"
-                alt="image"
-              />
-            </div>
-            <div className={classes.text}>
-              <h2>teen beats</h2>
-              <p>Conan Gray has entered the upside down</p>
-            </div>
-            <div className={classes.play_icon}>
-              <div className={classes.circle}>
-                <div className={classes.triangle}></div>
-              </div>
-            </div>
-          </div>
-          <div className={classes.card}>
-            <div className={classes.mg_holder}>
-              <img
-                src="https://static01.nyt.com/images/2022/06/28/arts/28CONAN-GRAY1/28CONAN-GRAY1-superJumbo.jpg"
-                alt="image"
-              />
-            </div>
-            <div className={classes.text}>
-              <h2>teen beats</h2>
-              <p>Conan Gray has entered the upside down</p>
-            </div>
-            <div className={classes.play_icon}>
-              <div className={classes.circle}>
-                <div className={classes.triangle}></div>
-              </div>
-            </div>
-          </div>
-          <div className={classes.card}>
-            <div className={classes.mg_holder}>
-              <img
-                src="https://static01.nyt.com/images/2022/06/28/arts/28CONAN-GRAY1/28CONAN-GRAY1-superJumbo.jpg"
-                alt="image"
-              />
-            </div>
-            <div className={classes.text}>
-              <h2>teen beats</h2>
-              <p>Conan Gray has entered the upside down</p>
-            </div>
-            <div className={classes.play_icon}>
-              <div className={classes.circle}>
-                <div className={classes.triangle}></div>
-              </div>
-            </div>
-          </div>
-          <div className={classes.card}>
-            <div className={classes.mg_holder}>
-              <img
-                src="https://static01.nyt.com/images/2022/06/28/arts/28CONAN-GRAY1/28CONAN-GRAY1-superJumbo.jpg"
-                alt="image"
-              />
-            </div>
-            <div className={classes.text}>
-              <h2>teen beats</h2>
-              <p>Conan Gray has entered the upside down</p>
-            </div>
-            <div className={classes.play_icon}>
-              <div className={classes.circle}>
-                <div className={classes.triangle}></div>
-              </div>
-            </div>
-          </div>{" "}
-          <div className={classes.card}>
-            <div className={classes.mg_holder}>
-              <img
-                src="https://static01.nyt.com/images/2022/06/28/arts/28CONAN-GRAY1/28CONAN-GRAY1-superJumbo.jpg"
-                alt="image"
-              />
-            </div>
-            <div className={classes.text}>
-              <h2>teen beats</h2>
-              <p>Conan Gray has entered the upside down</p>
-            </div>
-            <div className={classes.play_icon}>
-              <div className={classes.circle}>
-                <div className={classes.triangle}></div>
-              </div>
-            </div>
-          </div>{" "}
-          <div className={classes.card}>
-            <div className={classes.mg_holder}>
-              <img
-                src="https://static01.nyt.com/images/2022/06/28/arts/28CONAN-GRAY1/28CONAN-GRAY1-superJumbo.jpg"
-                alt="image"
-              />
-            </div>
-            <div className={classes.text}>
-              <h2>teen beats</h2>
-              <p>Conan Gray has entered the upside down</p>
-            </div>
-            <div className={classes.play_icon}>
-              <div className={classes.circle}>
-                <div className={classes.triangle}></div>
-              </div>
-            </div>
-          </div>{" "}
           <div className={classes.card}>
             <div className={classes.mg_holder}>
               <img

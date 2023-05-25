@@ -11,10 +11,6 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-a {
-  font-size: 0;
-}
-
 p {
   color: gray;
 }
@@ -28,7 +24,7 @@ p {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 a {
@@ -278,6 +274,7 @@ footer {
   position: relative;
   transition: all 0.4s;
   cursor: pointer;
+  margin: 10px;
 }
 
 .card h2 {
@@ -343,6 +340,12 @@ footer {
 .play_icon:hover .circle {
   transform: scale(1);
   cursor: auto;
+}
+
+.navv {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
 }
 
 @media screen and (max-width: 1024px) {
