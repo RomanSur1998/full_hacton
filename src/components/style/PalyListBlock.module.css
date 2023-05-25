@@ -6,17 +6,29 @@
 }
 
 .container {
+  z-index: 3;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
   background-color: black;
+  /* transition: background-color 0.3s ease-in-out; */
+}
+.container_1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  /* padding-top: 4vh; */
+  background-color: black;
+  /* transition: background-color 0.3s ease-in-out; */
 }
 .navbar_line {
   width: inherit;
   position: fixed;
+  /* top: 0vh; */
 }
 .rightPart {
+  /* padding-top: 4vh; */
   position: relative;
   width: 73%;
   background: linear-gradient(to top, rgb(33, 22, 67), rgba(71, 51, 139, 1));
