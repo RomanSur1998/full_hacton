@@ -3,6 +3,7 @@
   src: url("../../Circular/CircularStd-Bold.otf") format("truetype");
   src: url("../../Circular/CircularStd-Book.otf ") format("truetype");
 }
+
 h1,
 h2,
 h3,
@@ -68,7 +69,7 @@ p {
   scale: 1.02;
 }
 .btnGoogle img {
-  width: 6%;
+  width: 10%;
   padding-right: 16px;
 }
 .registerBox a {
@@ -77,7 +78,7 @@ p {
   padding-bottom: 22px;
 }
 .btnFacebook img {
-  width: 6%;
+  width: 10%;
   padding-right: 16px;
 }
 .btnFacebook p {

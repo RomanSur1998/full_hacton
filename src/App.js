@@ -4,7 +4,7 @@ import MainRoutes from "./MainRoutes";
 const App = () => {
   return (
     <div>
-  <MainRoutes></MainRoutes>
+      <MainRoutes />
     </div>
   );
 };
