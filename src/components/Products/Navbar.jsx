@@ -4,7 +4,7 @@ import right from "../../assets/chevron_big_right.svg";
 import left from "../../assets/chevron_big_left.svg";
 import users from "../../assets/Line=empty, Name=friends.svg";
 import login_user from "../../assets/Line=empty, Name=UserCircle.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
   // !-----------------
@@ -49,11 +49,20 @@ const Navbar = () => {
         <div className={navbar.line_right}>
           <button
             className={navbar.reg_btn}
-            onClick={() => navigate("/register")}
+            onClick={() => {
+              navigate("/Signup");
+            }}
           >
-            Registration
+            Sign up
           </button>
-          <button className={navbar.log_btn}>Login</button>
+          <button
+            className={navbar.log_btn}
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
+            Login
+          </button>
           <div className={navbar.line_arrow_left}>
             <img src={users} alt="" />
           </div>

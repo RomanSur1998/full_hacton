@@ -8,11 +8,12 @@
 }
 .line_container_1 {
   width: 100%;
-  margin: 10px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   background-color: black;
   padding: 20px;
+
   transition: background-color 0.3s ease-in-out;
 }
 .line_left {

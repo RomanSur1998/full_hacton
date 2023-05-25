@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import register from "../Registration/Registration.module.css";
+import register from "../SignUp/SignUp.module.css";
 import logoSpotify from "../../assets/Spotify_Logo_CMYK_Black.png";
 import facebookLogo from "../../assets/facebook-logo.png";
 import googleLogo from "../../assets/icon-google.png";
 import { useAuth } from "../../context/AuthContextProvider";
 import { Link } from "react-router-dom";
 
-const Registration = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
@@ -157,4 +157,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default SignUp;
