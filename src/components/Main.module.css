@@ -18,6 +18,7 @@ p {
 }
 
 .container {
+  padding-top: 60px;
   width: 100%;
   background-color: black;
   height: 1300px;

@@ -4,8 +4,10 @@ import right from "../../assets/chevron_big_right.svg";
 import left from "../../assets/chevron_big_left.svg";
 import users from "../../assets/Line=empty, Name=friends.svg";
 import login_user from "../../assets/Line=empty, Name=UserCircle.svg";
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   // !-----------------
   const [scrolled, setScrolled] = useState(false);
 
@@ -45,7 +47,14 @@ const Navbar = () => {
         </div>
 
         <div className={navbar.line_right}>
-          <button className={navbar.reg_btn}>Registration</button>
+          <button
+            className={navbar.reg_btn}
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
+            Registration
+          </button>
           <button className={navbar.log_btn}>Login</button>
           <div className={navbar.line_arrow_left}>
             <img src={users} alt="" />
