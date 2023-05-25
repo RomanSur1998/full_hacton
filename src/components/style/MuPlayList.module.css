@@ -21,6 +21,7 @@ h4 {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   color: aliceblue;
+  padding-top: 60px;
 }
 .TopInfo_Left {
   display: flex;
@@ -92,6 +93,7 @@ h4 {
 .track_line:hover {
   background-color: rgba(0, 0, 0, 0.419);
   border-radius: 0.5em;
+  transition: all 0.3s ease-in-out;
 }
 
 .track_line_head tr {
@@ -150,4 +152,21 @@ h4 {
 }
 .track_line_section_name h5 {
   margin: 5px;
+}
+@media (max-width: 1024px) {
+  .track_props_left {
+    width: 30%;
+  }
+
+  .track_props_right span {
+    display: none;
+  }
+  .track_props_right img:last-child {
+    display: none;
+  }
+  @media (max-width: 430px) {
+    .TopInfo_Right h2 {
+      font-size: 1em;
+    }
+  }
 }
