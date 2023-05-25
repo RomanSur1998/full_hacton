@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import heart from "../../assets/Vector.svg";
 import classes from "..//style/MuPlayList.module.css";
 import play from "../../assets/Play.svg";
@@ -7,6 +7,7 @@ import search from "../../assets/Line=bold, Name=search.svg";
 import drop from "../../assets/fi-ss-caret-down.svg";
 import clock from "../../assets/Line=Clock.svg";
 import song from "../../assets/Rectangle 236.svg";
+import ReactPlayer from "react-player";
 
 const MyPalayList = () => {
   return (
@@ -45,12 +46,76 @@ const MyPalayList = () => {
               <h4>Album</h4>
             </div>
             <div>
-              <h4>Data puplic</h4>
+              <h4>Date publick</h4>
             </div>
             <div>
               <img src={clock} alt="" />
             </div>
           </div>
+          <div className={classes.track_line}>
+            <div>
+              {" "}
+              <img src={play} alt="" />
+            </div>
+            <div className={classes.track_line_section}>
+              <img src={song} alt="" />
+              <div className={classes.track_line_section_name}>
+                <h4> Kill Bill </h4>
+                <h5> SZA </h5>
+              </div>
+            </div>
+            <div>SOS</div>
+            <div>1 day ago</div>
+            <div>3:22</div>
+          </div>
+          <div className={classes.track_line}>
+            <div>
+              {" "}
+              <img src={play} alt="" />
+            </div>
+            <div className={classes.track_line_section}>
+              <img src={song} alt="" />
+              <div className={classes.track_line_section_name}>
+                <h4> Kill Bill </h4>
+                <h5> SZA </h5>
+              </div>
+            </div>
+            <div>SOS</div>
+            <div>1 day ago</div>
+            <div>3:22</div>
+          </div>
+          <div className={classes.track_line}>
+            <div>
+              {" "}
+              <img src={play} alt="" />
+            </div>
+            <div className={classes.track_line_section}>
+              <img src={song} alt="" />
+              <div className={classes.track_line_section_name}>
+                <h4> Kill Bill </h4>
+                <h5> SZA </h5>
+              </div>
+            </div>
+            <div>SOS</div>
+            <div>1 day ago</div>
+            <div>3:22</div>
+          </div>
+          <div className={classes.track_line}>
+            <div>
+              {" "}
+              <img src={play} alt="" />
+            </div>
+            <div className={classes.track_line_section}>
+              <img src={song} alt="" />
+              <div className={classes.track_line_section_name}>
+                <h4> Kill Bill </h4>
+                <h5> SZA </h5>
+              </div>
+            </div>
+            <div>SOS</div>
+            <div>1 day ago</div>
+            <div>3:22</div>
+          </div>{" "}
           <div className={classes.track_line}>
             <div>
               {" "}
