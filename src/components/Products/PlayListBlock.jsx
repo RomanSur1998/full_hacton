@@ -1,16 +1,20 @@
 import React from "react";
-import classes from "..//style/PalyListBlock.module.css";
+import playlist from "..//style/PalyListBlock.module.css";
 import MyPalayList from "./MyPalayList";
 import Navbar from "./Navbar";
-import Main from "../Main";
+
+import SideBar from "./SideBar";
+// import Main from "../Main";
 const PlayListBlock = () => {
   return (
-    <div className={classes.container}>
-      <div className={classes.leftPart}>
-        //todo Часть куда добавиться SIDEBAR
+    <div className={playlist.container}>
+      <div className={playlist.leftPart}>
+        <SideBar />
       </div>
-      <div s className={classes.rightPart}>
-        <Navbar />
+      <div className={playlist.rightPart}>
+        <div className={playlist.navbar_line}>
+          <Navbar />
+        </div>
         <MyPalayList />
         {/* <Main /> */}
       </div>

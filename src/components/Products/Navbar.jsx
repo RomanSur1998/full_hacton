@@ -1,20 +1,38 @@
-import React from "react";
-import classes from "../style/Navbar.module.css";
+import React, { useEffect, useState } from "react";
+import navbar from "../style/Navbar.module.css";
 import right from "../../assets/chevron_big_right.svg";
 import left from "../../assets/chevron_big_left.svg";
 import users from "../../assets/Line=empty, Name=friends.svg";
 import login_user from "../../assets/Line=empty, Name=UserCircle.svg";
 
 const Navbar = () => {
+  // !-----------------
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  // !=================
   return (
     <>
-      <div className={classes.line_container}>
-        <div className={classes.line_left}>
-          <div className={classes.line_arrow_left}>
+      <div
+        className={scrolled ? navbar.line_container_1 : navbar.line_container}
+      >
+        <div className={navbar.line_left}>
+          <div className={navbar.line_arrow_left}>
             <img src={left} alt="" />
             {/* &lsaquo; */}
           </div>
-          <div className={classes.line_arrow_left}>
+          <div className={navbar.line_arrow_left}>
             {/* &rsaquo; */}
             <img src={right} alt="" />
           </div>
@@ -25,11 +43,14 @@ const Navbar = () => {
             placeholder="Что хочешь послушать "
           />
         </div>
-        <div className={classes.line_right}>
-          <div className={classes.line_arrow_left}>
+
+        <div className={navbar.line_right}>
+          <button className={navbar.reg_btn}>Registration</button>
+          <button className={navbar.log_btn}>Login</button>
+          <div className={navbar.line_arrow_left}>
             <img src={users} alt="" />
           </div>
-          <div className={classes.line_arrow_left}>
+          <div className={navbar.line_arrow_left}>
             <img src={login_user} alt="" />
           </div>
         </div>

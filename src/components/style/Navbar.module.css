@@ -1,8 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 .line_container {
-  width: 95%;
+  width: 100%;
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
+  transition: background-color 0.3s ease-in-out;
+}
+.line_container_1 {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out;
 }
 .line_left {
   display: flex;
@@ -37,4 +48,59 @@
 .line_left input:focus {
   color: aliceblue;
   border: 1px solid white;
+}
+.reg_btn {
+  width: 80px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  color: aliceblue;
+  opacity: 0.7;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+}
+.reg_btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
+}
+.log_btn {
+  margin-left: 2em;
+  width: 100px;
+  height: 50px;
+  border-radius: 2em;
+  border: none;
+  background-color: aliceblue;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05em;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+}
+.log_btn:hover {
+  font-weight: 600;
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
+}
+@media ((max-width: 770px)) {
+  .line_left input {
+    width: 150px;
+  }
+  .log_btn {
+    width: 50px;
+  }
+  /* .reg_btn {
+    
+  } */
+}
+@media ((max-width: 430px)) {
+  .line_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .line_left div {
+    display: none;
+  }
 }
