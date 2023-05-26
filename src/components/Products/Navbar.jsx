@@ -50,7 +50,7 @@ const Navbar = () => {
           <button
             className={navbar.reg_btn}
             onClick={() => {
-              navigate("/Signup");
+              navigate("/signup");
             }}
           >
             Sign up
