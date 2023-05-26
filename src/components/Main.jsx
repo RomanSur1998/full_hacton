@@ -195,7 +195,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <footer>
+        {/* <footer>
           <div className={main.footer__container}>
             <div className={main.footer__left}>
               <div className={main.support1}>
@@ -253,7 +253,7 @@ const Main = () => {
               </div>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </div>
   );

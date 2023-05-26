@@ -51,6 +51,13 @@ const SideBar = () => {
             <h4>Playlist: 2 tracks</h4>
           </div>
         </div>
+        <div className={sidebars.playList_line}>
+          <img src={prev} alt="" />
+          <div>
+            <h3>Download</h3>
+            <h4>Downloaded: 2 tracks</h4>
+          </div>
+        </div>
       </div>
     </div>
   );
