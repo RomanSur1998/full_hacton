@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import heart from "../../assets/Vector.svg";
 import classes from "..//style/MuPlayList.module.css";
-import play from "../../assets/Play.svg";
+import play_btn from "../../assets/Play.svg";
 import download from "../../assets/Line=empty, Name=download.svg";
 import search from "../../assets/Line=bold, Name=search.svg";
 import drop from "../../assets/fi-ss-caret-down.svg";
@@ -10,36 +10,13 @@ import song from "../../assets/Rectangle 236.svg";
 import music from "../../assets/tamada.mp3";
 import ReactPlayer from "react-player";
 import axios from "axios";
+import useSound from "use-sound";
 
 const MyPalayList = () => {
-  // const [selectedFile, setSelectedFile] = useState(null);
-
-  // const handleFileChange = (event) => {
-  //   const file = event.target.files[0];
-  //   setSelectedFile(URL.createObjectURL(file));
-  // };
-  // const [songs, setSongs] = useState([]);
-  // console.log(song[0].audio_file);
-  // async function getSongs() {
-  //   try {
-  //     let res = await axios.get("http://34.125.252.214/songs/");
-
-  //     setSongs(res.data.results);
-  //   } catch (error) {
-  //     console.log("error");
-  //   }
-  // }
-  // useEffect(() => {
-  //   getSongs();
-  // }, []);
-
-  const audioUrl = song[0].audio_file; // Замените на URL вашего аудио файла
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
+  // const soundFile =
+  const [play, { pause, duration, sound }] = useSound(
+    "http://34.125.252.214/media/songs/T-Fest__%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BD%D0%B8%D1%82_-_%D0%9B%D0%B0%D0%BC%D0%B1%D0%B0%D0%B4%D0%B0.mp3"
+  );
   return (
     <div>
       <div className={classes.TopInfo}>
@@ -55,7 +32,7 @@ const MyPalayList = () => {
       <div className={classes.track_block}>
         <div className={classes.track_props}>
           <div className={classes.track_props_left}>
-            <img src={play} alt="" />
+            <img src={play_btn} alt="" />
             <img src={download} alt="" />
           </div>
           <div className={classes.track_props_right}>
@@ -85,7 +62,7 @@ const MyPalayList = () => {
           <div className={classes.track_line}>
             <div>
               {" "}
-              <img src={play} alt="" />
+              <img src={play_btn} alt="" />
             </div>
             <div className={classes.track_line_section}>
               <img src={song} alt="" />
@@ -101,7 +78,7 @@ const MyPalayList = () => {
           <div className={classes.track_line}>
             <div>
               {" "}
-              <img src={play} alt="" />
+              <img src={play_btn} alt="" />
             </div>
             <div className={classes.track_line_section}>
               <img src={song} alt="" />
@@ -117,7 +94,7 @@ const MyPalayList = () => {
           <div className={classes.track_line}>
             <div>
               {" "}
-              <img src={play} alt="" />
+              <img src={play_btn} alt="" />
             </div>
             <div className={classes.track_line_section}>
               <img src={song} alt="" />
@@ -133,7 +110,7 @@ const MyPalayList = () => {
           <div className={classes.track_line}>
             <div>
               {" "}
-              <img src={play} alt="" />
+              <img src={play_btn} alt="" />
             </div>
             <div className={classes.track_line_section}>
               <img src={song} alt="" />
@@ -149,7 +126,7 @@ const MyPalayList = () => {
           <div className={classes.track_line}>
             <div>
               {" "}
-              <img src={play} alt="" />
+              <img src={play_btn} alt="" />
             </div>
             <div className={classes.track_line_section}>
               <img src={song} alt="" />
@@ -165,19 +142,12 @@ const MyPalayList = () => {
         </div>
       </div>
       <div>
-        <audio src={music} controls={false} autoPlay={isPlaying} />
-        <button onClick={handlePlayPause}>
-          {isPlaying ? "Пауза" : "Воспроизвести"}
-        </button>
+        {/* <audio
+          src="http://34.125.252.214/media/songs/T-Fest__%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BD%D0%B8%D1%82_-_%D0%9B%D0%B0%D0%BC%D0%B1%D0%B0%D0%B4%D0%B0.mp3"
+          controls
+        /> */}
+        <button onClick={play}>Xnj sdkfhxgjgfhdjk</button>
       </div>
-      {/* <div>
-        <input type="file" accept="audio/*" onChange={handleFileChange} />
-        {selectedFile && (
-          <audio controls src={selectedFile}>
-            Ваш браузер не поддерживает аудио элемент.
-          </audio>
-        )}
-      </div> */}
     </div>
   );
 };

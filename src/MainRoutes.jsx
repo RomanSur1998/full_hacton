@@ -5,6 +5,7 @@ import PlayListBlock from "./components/pages/MainBlockPages";
 import MyPalayList from "./components/Products/MyPalayList";
 import Main from "./components/Main";
 import Download from "./components/Products/Download";
+import Player from "./components/Products/Player";
 
 const MainRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const MainRoutes = () => {
       {/* <Route path="/register" element={<Registration />} /> */}
       <Route path="/my_play_list" element={<MyPalayList />} />
       <Route path="/download" element={<Download />} />
+      {/* <Route path="/player" element={<Player />} /> */}
     </Routes>
   );
 };
