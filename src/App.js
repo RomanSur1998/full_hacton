@@ -2,7 +2,7 @@ import React from "react";
 import MainRoutes from "./MainRoutes";
 import Main from "./components/Main";
 import Registration from "./components/Registration/Registration";
-import PlayListBlock from "./components/pages/PlayListBlock";
+import PlayListBlock from "./components/pages/MainBlockPages";
 import SideBar from "./components/Products/SideBar";
 import { useLocation, useParams } from "react-router";
 
