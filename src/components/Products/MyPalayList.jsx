@@ -12,26 +12,26 @@ import ReactPlayer from "react-player";
 import axios from "axios";
 
 const MyPalayList = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
+  // const [selectedFile, setSelectedFile] = useState(null);
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    setSelectedFile(URL.createObjectURL(file));
-  };
-  const [songs, setSongs] = useState([]);
-  console.log(song[0].audio_file);
-  async function getSongs() {
-    try {
-      let res = await axios.get("http://34.125.252.214/songs/");
+  // const handleFileChange = (event) => {
+  //   const file = event.target.files[0];
+  //   setSelectedFile(URL.createObjectURL(file));
+  // };
+  // const [songs, setSongs] = useState([]);
+  // console.log(song[0].audio_file);
+  // async function getSongs() {
+  //   try {
+  //     let res = await axios.get("http://34.125.252.214/songs/");
 
-      setSongs(res.data.results);
-    } catch (error) {
-      console.log("error");
-    }
-  }
-  useEffect(() => {
-    getSongs();
-  }, []);
+  //     setSongs(res.data.results);
+  //   } catch (error) {
+  //     console.log("error");
+  //   }
+  // }
+  // useEffect(() => {
+  //   getSongs();
+  // }, []);
 
   const audioUrl = song[0].audio_file; // Замените на URL вашего аудио файла
   const [isPlaying, setIsPlaying] = useState(false);
@@ -164,12 +164,12 @@ const MyPalayList = () => {
           </div>
         </div>
       </div>
-      {/* <div>
+      <div>
         <audio src={music} controls={false} autoPlay={isPlaying} />
         <button onClick={handlePlayPause}>
           {isPlaying ? "Пауза" : "Воспроизвести"}
         </button>
-      </div> */}
+      </div>
       {/* <div>
         <input type="file" accept="audio/*" onChange={handleFileChange} />
         {selectedFile && (
