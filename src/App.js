@@ -1,6 +1,7 @@
 import React from "react";
 import SignUp from "./components/SignUp/SignUp";
-import PlayListBlock from "./components/pages/PlayListBlock";
+import MainBlockPages from './components/pages/MainBlockPages.jsx'
+
 
 import { useLocation } from "react-router";
 import Auth from "./components/Auth/Auth";
@@ -15,7 +16,7 @@ const App = () => {
       ) : rout.pathname === "/login" ? (
         <Auth />
       ) : (
-        <PlayListBlock />
+        <MainBlockPages/>
       )}
     </div>
   );

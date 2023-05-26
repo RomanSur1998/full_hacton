@@ -5,11 +5,14 @@ import left from "../../assets/chevron_big_left.svg";
 import users from "../../assets/Line=empty, Name=friends.svg";
 import login_user from "../../assets/Line=empty, Name=UserCircle.svg";
 import { useNavigate } from "react-router";
+import { useAuth } from "../../context/AuthContextProvider";
 
 const Navbar = () => {
   // !-----------------
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+
+  const {} = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
