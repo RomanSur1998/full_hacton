@@ -274,8 +274,10 @@ a {
   text-decoration: underline;
   text-decoration-color: #ffffff;
 }
-.forgotLink p {
+.forgotLink button {
   color: white;
+  background-color: transparent;
+  border: none;
 }
 .passwordBlock {
   position: relative;

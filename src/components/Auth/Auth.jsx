@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import auth from "../Auth/Auth.module.css";
-import whiteLogo from "..//../assets/Spotify_Logo_CMYK_White.png";
+import whiteLogo from "../../assets/Spotify_Logo_CMYK_White.png";
 import facebookLogo from "../../assets/facebook-logo.png";
 import googleLogo from "../../assets/icon-google.png";
 import appleLogo from "../../assets/apple.png";
 import hide from "../../assets/hide.png";
 import eye from "../../assets/eye.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContextProvider";
 
 const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { handleLogin, loading, error, setError } = useAuth();
+  const { handleLogin } = useAuth();
+
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -108,13 +110,6 @@ const Auth = () => {
                   )}
                 </button>
               </div>
-              {/* <input
-             type={showPassword ? 'text' : 'password'}
-             id="password-input"
-                placeholder="Password"
-                className="input"
-                autoComplete="new-password"
-              /> */}
               <div className={auth.help}>
                 <span>You need to enter a password.</span>
               </div>
@@ -125,9 +120,15 @@ const Auth = () => {
               </button>
             </div>
             <div className={auth.forgotPaaasword}>
-              <Link to="/" className={auth.forgotLink}>
-                <p>Forgot your password?</p>
-              </Link>
+              <div className={auth.forgotLink}>
+                <button
+                  onClick={() => {
+                    navigate("/reset");
+                  }}
+                >
+                  Forgot your password?
+                </button>
+              </div>
             </div>
           </form>
           <hr />
