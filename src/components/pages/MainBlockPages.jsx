@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import playlist from "..//style/PalyListBlock.module.css";
-import MyPalayList from "../Products/MyPalayList";
-import Navbar from "../Products/Navbar";
+import playlist from "../style/PalyListBlock.module.css";
 
+import Navbar from "../Products/Navbar";
 import SideBar from "../Products/SideBar";
-import Main from "../Main";
 import MainRoutes from "../../MainRoutes";
 
 const PlayListBlock = () => {

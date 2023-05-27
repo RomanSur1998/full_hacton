@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Registration from "./components/Registration/Registration";
-import PlayListBlock from "./components/pages/MainBlockPages";
 import MyPalayList from "./components/Products/MyPalayList";
 import Main from "./components/Main";
 import Download from "./components/Products/Download";

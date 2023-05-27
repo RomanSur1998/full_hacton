@@ -1,23 +1,25 @@
 import React from "react";
-import MainRoutes from "./MainRoutes";
-import Main from "./components/Main";
-import Registration from "./components/Registration/Registration";
-import PlayListBlock from "./components/pages/MainBlockPages";
-import SideBar from "./components/Products/SideBar";
-import { useLocation, useParams } from "react-router";
+import SignUp from "./components/SignUp/SignUp";
+import MainBlockPages from './components/pages/MainBlockPages.jsx'
+
+
+import { useLocation } from "react-router";
+import Auth from "./components/Auth/Auth";
+import ResetPassword from "./components/Auth/ResetPassword";
+import Profile from "./components/Auth/Profile";
 
 const App = () => {
   const rout = useLocation();
-  console.log(rout.pathname);
   return (
     <div>
-      {rout.pathname === "/register" ? (
-        <Registration />
+      {rout.pathname === "/signup" ? (
+        <SignUp />
       ) : rout.pathname === "/login" ? (
-        <PlayListBlock />
-      ) : (
-        <PlayListBlock />
-      )}
+        <Auth />
+      ): rout.pathname === '/reset' ? (<ResetPassword/>):
+      rout.pathname === '/profile' ? (<Profile/>):(
+        <MainBlockPages/>
+      ) }
     </div>
   );
 };
