@@ -11,11 +11,19 @@ import valume from "../../assets/valume.svg";
 import axios from "axios";
 
 export default function Player() {
-  const [volume, setVolume] = useState(1); // Начальная громкость равна 1 (максимальная)
-
-  const qala =
-    "http://34.125.252.214/media/songs/T-Fest__%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BD%D0%B8%D1%82_-_%D0%9B%D0%B0%D0%BC%D0%B1%D0%B0%D0%B4%D0%B0.mp3";
+  const [volume, setVolume] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [track, setTrack] = useState("");
+  console.log(track);
+  async function getSongs() {
+    const res = await axios.get("http://34.125.252.214/songs/");
+    console.log(res.data.results);
+    setTrack(res.data.results[4].audio_file);
+  }
+  useEffect(() => {
+    getSongs();
+  }, []);
+
   const [time, setTime] = useState({
     min: "",
     sec: "",
@@ -27,7 +35,7 @@ export default function Player() {
 
   const [seconds, setSeconds] = useState();
 
-  const [play, { pause, duration, sound }] = useSound(qala, { volume });
+  const [play, { pause, duration, sound }] = useSound(`${track}`, { volume });
 
   useEffect(() => {
     if (duration) {
@@ -108,7 +116,6 @@ export default function Player() {
         <div className={playerblock.songTimeLine}>
           <div className={playerblock.time}>
             <p>
-              1212
               {currTime.min}:{currTime.sec}
             </p>
           </div>
@@ -125,7 +132,6 @@ export default function Player() {
           />
           <div>
             <p>
-              3232
               {time.min}:{time.sec}
             </p>
           </div>

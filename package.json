@@ -9,11 +9,7 @@
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-icons": "^4.8.0",
-=======
     "react-modal": "^3.16.1",
->>>>>>> 68fe46f5c2b7e3e9149bdcda3a0d27d399b62748
     "react-player": "^2.12.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",

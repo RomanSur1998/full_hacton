@@ -13,10 +13,6 @@ import axios from "axios";
 import useSound from "use-sound";
 
 const MyPalayList = () => {
-  // const soundFile =
-  const [play, { pause, duration, sound }] = useSound(
-    "http://34.125.252.214/media/songs/T-Fest__%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BD%D0%B8%D1%82_-_%D0%9B%D0%B0%D0%BC%D0%B1%D0%B0%D0%B4%D0%B0.mp3"
-  );
   return (
     <div>
       <div className={classes.TopInfo}>
@@ -141,13 +137,7 @@ const MyPalayList = () => {
           </div>
         </div>
       </div>
-      <div>
-        {/* <audio
-          src="http://34.125.252.214/media/songs/T-Fest__%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BD%D0%B8%D1%82_-_%D0%9B%D0%B0%D0%BC%D0%B1%D0%B0%D0%B4%D0%B0.mp3"
-          controls
-        /> */}
-        <button onClick={play}>Xnj sdkfhxgjgfhdjk</button>
-      </div>
+      <div></div>
     </div>
   );
 };
