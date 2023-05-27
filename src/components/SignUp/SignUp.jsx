@@ -1,37 +1,18 @@
 import React, { useState } from "react";
-import register from "../Registration/Registration.module.css";
+import register from "../SignUp/SignUp.module.css";
 import logoSpotify from "../../assets/Spotify_Logo_CMYK_Black.png";
 import facebookLogo from "../../assets/facebook-logo.png";
 import googleLogo from "../../assets/icon-google.png";
 import { useAuth } from "../../context/AuthContextProvider";
 import { Link } from "react-router-dom";
 
-const Registration = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
 
   const { handleRegister, error, loading, setError } = useAuth();
-
-  // function handleSave(event) {
-  //   event.preventDefault();
-  //   if (
-  //     !email.trim() ||
-  //     !number.trim() ||
-  //     !password.trim() ||
-  //     !passwordConfirm.trim()
-  //   ) {
-  //     alert("заполните поля");
-  //   } else {
-  //     let formData = new FormData();
-  //     formData.append("email", email);
-  //     formData.append("number", number);
-  //     formData.append("password", password);
-  //     formData.append("password_confirm", passwordConfirm);
-  //     handleRegister(formData);
-  //   }
-  // }
 
   function handleSave(event) {
     event.preventDefault();
@@ -167,7 +148,7 @@ const Registration = () => {
           <p className={register.typeElement}>
             <span>
               Have an account?
-              <Link>Log in</Link>
+              <Link to="/login">Log in</Link>
             </span>
           </p>
         </form>
@@ -176,4 +157,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default SignUp;

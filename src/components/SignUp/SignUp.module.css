@@ -69,7 +69,7 @@ p {
   scale: 1.02;
 }
 .btnGoogle img {
-  width: 6%;
+  width: 10%;
   padding-right: 16px;
 }
 .registerBox a {
@@ -78,7 +78,7 @@ p {
   padding-bottom: 22px;
 }
 .btnFacebook img {
-  width: 6%;
+  width: 10%;
   padding-right: 16px;
 }
 .btnFacebook p {
@@ -268,4 +268,55 @@ p {
 
 .ball:nth-child(5) {
   animation-delay: -0.8s;
+}
+
+/* responsive  */
+@media (max-width: 480px) {
+  .registerBox h2 {
+    width: 90%;
+    margin-top: 40px;
+    font-size: 26px;
+    margin: 40px auto 0 auto;
+  }
+  .registerBox {
+    width: 93%;
+  }
+  .registerBox a {
+    width: 90%;
+  }
+  .btnFacebook {
+    width: 100%;
+  }
+  .btnGoogle {
+    width: 100%;
+  }
+  .formGroup {
+    width: 100%;
+  }
+  .formGroup input {
+    width: 100%;
+  }
+  .form {
+    margin: 0 auto;
+  }
+
+  .typeElement span {
+    font-family: "Circular";
+    font-size: 0.9rem;
+    padding: 0 20%;
+  }
+  .typeElement a {
+    font-family: "Circular";
+    font-size: 0.9rem;
+  }
+  .form input {
+    font-size: 0.9rem;
+  }
+  .LabelGroup {
+    font-family: "Circular";
+    font-size: 0.9rem;
+  }
+  .button {
+    font-size: 1.06rem;
+  }
 }

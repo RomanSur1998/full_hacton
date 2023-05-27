@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "Circular";
+  src: url("../Circular/CircularStd-Bold.otf") format("truetype");
+  src: url("../Circular/CircularStd-Bold.otf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Circular";
 }
 
 a {

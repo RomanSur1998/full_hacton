@@ -87,6 +87,34 @@
 .screen_min {
   display: none;
 }
+
+/* Modal style  */
+.modal_window {
+  border-radius: 5px;
+  width: 200px;
+  height: 190px;
+  background-color: #282828;
+  border: 16px solid transparent;
+  position: absolute;
+  top: 80px;
+  right: 35px;
+}
+.textBlock {
+  height: 40px;
+}
+.textBlock button {
+  font-size: 14px;
+  color: #eaeaea;
+  background-color: transparent;
+  border: none;
+}
+
+hr {
+  background-color: #494848;
+  height: 1px;
+}
+
+/* ----------------------------------- */
 @media ((max-width: 770px)) {
   .line_left input {
     width: 150px;
