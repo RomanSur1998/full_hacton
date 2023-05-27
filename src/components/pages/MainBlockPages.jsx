@@ -4,6 +4,8 @@ import playlist from "../style/PalyListBlock.module.css";
 import Navbar from "../Products/Navbar";
 import SideBar from "../Products/SideBar";
 import MainRoutes from "../../MainRoutes";
+import Player from "../Products/Player";
+import FullMain from "../Products/FullMain";
 
 const PlayListBlock = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,6 +34,9 @@ const PlayListBlock = () => {
         <div className={playlist.route_block}>
           <MainRoutes />
         </div>
+      </div>
+      <div className={playlist.player_block}>
+        <Player />
       </div>
     </div>
   );

@@ -7,13 +7,19 @@ import plus from "../../assets/Line=empty, Name=plus.svg";
 import right from "../../assets/Line=empty, Name=right-arrow.svg";
 import drop from "../../assets/fi-ss-caret-down.svg";
 import prev from "../../assets/Rectangle 236.svg";
+import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
+  const navigate = useNavigate();
   return (
     <div className={sidebars.container}>
       <div className={sidebars.container_top}>
         <div className={sidebars.container_top_in}>
-          <div>
+          <div
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <img src={home} alt="" />
             <h3>Home Page</h3>
           </div>
@@ -44,14 +50,24 @@ const SideBar = () => {
             <img src={drop} alt="" />
           </div>
         </div>
-        <div className={sidebars.playList_line}>
+        <div
+          onClick={() => {
+            navigate("/my_play_list");
+          }}
+          className={sidebars.playList_line}
+        >
           <img src={prev} alt="" />
           <div>
             <h3>Liked Track</h3>
             <h4>Playlist: 2 tracks</h4>
           </div>
         </div>
-        <div className={sidebars.playList_line}>
+        <div
+          onClick={() => {
+            navigate("/download");
+          }}
+          className={sidebars.playList_line}
+        >
           <img src={prev} alt="" />
           <div>
             <h3>Download</h3>
