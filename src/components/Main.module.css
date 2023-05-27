@@ -4,17 +4,21 @@
   box-sizing: border-box;
 }
 
-/* body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-} */
-
 a {
-  font-size: 0;
+  font-size: 1em;
 }
 
 p {
-  color: gray;
+  color: #fff;
+}
+.navv {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.navv a {
+  color: #fff;
+  font-size: 1.1em;
 }
 
 .container {
@@ -22,6 +26,7 @@ p {
   width: 100%;
   background-color: black;
   height: 1300px;
+  color: #fff;
 }
 
 .cards {
@@ -32,7 +37,7 @@ p {
 }
 
 a {
-  color: #818181;
+  color: #fff;
 }
 footer {
   background-color: black;

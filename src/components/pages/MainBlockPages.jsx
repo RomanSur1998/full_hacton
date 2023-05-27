@@ -7,6 +7,7 @@ import SideBar from "../Products/SideBar";
 import Main from "../Main";
 import MainRoutes from "../../MainRoutes";
 import Player from "../Products/Player";
+import FullMain from "../Products/FullMain";
 
 const PlayListBlock = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,12 +36,9 @@ const PlayListBlock = () => {
         <div className={playlist.route_block}>
           <MainRoutes />
         </div>
-        <div
-          className={playlist.player_block}
-          // style={{ position: "fixed", bottom: "0", left: "0", width: "100%" }}
-        >
-          <Player />
-        </div>
+      </div>
+      <div className={playlist.player_block}>
+        <Player />
       </div>
     </div>
   );

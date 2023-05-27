@@ -48,6 +48,12 @@
   width: 23%;
   /* background-color: rgba(18, 18, 18, 1); */
 }
+.player_block {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 @media (max-width: 430px) {
   .container {
     /* z-index: 3; */
