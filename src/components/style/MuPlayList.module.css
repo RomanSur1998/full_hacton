@@ -125,6 +125,7 @@ h4 {
   grid-template-columns: repeat(5, 1fr);
   margin: 30px auto;
   font-family: "Open Sans", sans-serif;
+  cursor: pointer;
 }
 .track_line div {
   display: flex;
@@ -133,6 +134,7 @@ h4 {
 }
 .track_line_section {
   display: flex;
+  cursor: pointer;
 }
 
 .track_line_section_name {

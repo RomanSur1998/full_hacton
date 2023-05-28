@@ -135,7 +135,7 @@ const Auth = () => {
           <p className={auth.typeElement}>
             <span>
               Don't have an account?
-              <Link to="/register">Sign up for Spotify</Link>
+              <Link to="/signup">Sign up for Spotify</Link>
             </span>
           </p>
         </div>

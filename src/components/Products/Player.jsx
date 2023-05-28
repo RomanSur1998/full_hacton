@@ -9,16 +9,30 @@ import nextSong from "../../assets/nextSong.svg";
 import fullScreen from "../../assets/Full Screen.svg";
 import valume from "../../assets/valume.svg";
 import axios from "axios";
+import { useContext } from "react";
+import { songContext } from "../../context/SongContextProvider";
 
 export default function Player() {
+  const {} = useContext(songContext);
   const [volume, setVolume] = useState(1);
+
+  const [Counter, setCounter] = useState(3);
+  console.log(Counter);
   const [isPlaying, setIsPlaying] = useState(false);
   const [track, setTrack] = useState("");
+  const [trackList, setTrackList] = useState([]);
   console.log(track);
+  console.log(trackList);
+
   async function getSongs() {
-    const res = await axios.get("http://34.125.252.214/songs/");
-    console.log(res.data.results);
-    setTrack(res.data.results[4].audio_file);
+    try {
+      const res = await axios.get("http://34.125.87.211/songs/");
+      console.log(res.data.results);
+      setTrackList(res.data.results);
+      setTrack(res.data.results[Counter].audio_file);
+    } catch (error) {
+      console.log("error");
+    }
   }
   useEffect(() => {
     getSongs();
@@ -35,7 +49,14 @@ export default function Player() {
 
   const [seconds, setSeconds] = useState();
 
-  const [play, { pause, duration, sound }] = useSound(`${track}`, { volume });
+  const [play, { pause, duration, sound }] = useSound(
+    !track == ""
+      ? track
+      : "http://34.125.252.214/media/songs/Linkin_Park_-_Leave_Out_All_the_Rest.mp3",
+    {
+      volume,
+    }
+  );
 
   useEffect(() => {
     if (duration) {
@@ -80,17 +101,29 @@ export default function Player() {
       <div className={playerblock.songInfo}>
         <img
           className={playerblock.musicCover}
-          src="https://picsum.photos/200/200"
+          src={
+            track
+              ? trackList[Counter].cover_photo
+              : "https://picsum.photos/200/200"
+          }
         />
         <div>
-          <h3 className="title">Rubaiyyan</h3>
-          <p className="subTitle">Qala</p>
+          <h3 className="title">{track ? trackList[Counter].title : "Name"}</h3>
+          <p className="subTitle">
+            {track ? trackList[Counter].artist : "Artist"}
+          </p>
         </div>
       </div>
 
       <div className={playerblock.songLine}>
         <div>
-          <button className={playerblock.playButton}>
+          <button
+            className={playerblock.playButton}
+            onClick={() => {
+              setCounter(Counter - 1);
+              getSongs();
+            }}
+          >
             <img src={prevSong} alt="" />
           </button>
           {!isPlaying ? (
@@ -108,7 +141,13 @@ export default function Player() {
               <img src={pauseBtn} alt="" />
             </button>
           )}
-          <button className={playerblock.playButton}>
+          <button
+            className={playerblock.playButton}
+            onClick={() => {
+              setCounter(Counter + 1);
+              getSongs();
+            }}
+          >
             <img src={nextSong} alt="" />
           </button>
         </div>

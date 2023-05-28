@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   margin: 10px;
+  cursor: pointer;
 }
 .container_top_in div:hover img {
   opacity: 1;
@@ -46,7 +47,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60vh;
+  height: 63vh;
   border-radius: 15px;
   margin-top: 20px;
   background-color: rgba(18, 18, 18, 1);
@@ -100,6 +101,7 @@
   background-color: black;
   border-radius: 10px;
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 .playList_line:hover {
   background-color: rgba(10, 10, 10, 0.826);
